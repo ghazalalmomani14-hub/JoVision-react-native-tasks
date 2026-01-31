@@ -1,7 +1,12 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import Task18 from './Tasks/Task18';
+import { View } from 'react-native';
+import Task19 from './Tasks/Task19';
 
 export default function App() {
-  return <Task18 />;
+  return (
+    <View style={{ flex: 1 }}>
+      <Task19 />
+    </View>
+  );
 }
-  
