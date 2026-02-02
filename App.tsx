@@ -1,35 +1,41 @@
-import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import MyFunctionPage from './Tasks/Task22';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import MyClassPage from './Tasks/Task23';
 
-export default function App() {
-  const [show, setShow] = useState(false);
-  const [text, setText] = useState(''); 
+interface AppState {
+  textFromChild: string;
+}
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Typed Text: {text}</Text>
+class App extends Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      textFromChild: ''
+    };
 
-      <Button
-        title="Show"
-        onPress={() => setShow(!show)}
-      />
+    this.updateText = this.updateText.bind(this);
+  }
 
-      {show && (
-        <MyFunctionPage updateText={setText} />
-      )}
-    </View>
-  );
+  updateText(newText: string) {
+    this.setState({ textFromChild: newText });
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>
+          Typed Text: {this.state.textFromChild}
+        </Text>
+
+        <MyClassPage onTextChange={this.updateText} />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 20,
-    marginBottom: 20,
-  },
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  title: { fontSize: 20, marginBottom: 20 }
 });
+
+export default App;
