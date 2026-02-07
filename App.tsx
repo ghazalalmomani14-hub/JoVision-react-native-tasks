@@ -1,17 +1,22 @@
+// App.tsx
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import Task25 from './Tasks/Task25';
+import { View, StyleSheet } from 'react-native';
+import Task26 from './Tasks/Task26';
 
-export default function App() {
+const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Task25 />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Task26 />
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
+
+export default App;
