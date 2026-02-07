@@ -1,12 +1,12 @@
 // App.tsx
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Task26 from './Tasks/Task26';
+import Task27 from './Tasks/Task27';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Task26 />
+      <Task27 />
     </View>
   );
 };
