@@ -1,12 +1,12 @@
 // App.tsx
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Task29 from './Tasks/Task29';
+import Task30 from './Tasks/Task30';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Task29 />
+      <Task30 />
     </View>
   );
 };
@@ -14,7 +14,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start', 
     alignItems: 'center',
   },
 });
