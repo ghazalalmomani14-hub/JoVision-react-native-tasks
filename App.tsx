@@ -1,22 +1,19 @@
-// App.tsx
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Task31 from './Tasks/Task31';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import Task32 from './Tasks/Task32';
 
-const App = () => {
+function App() {
   return (
-    <View style={styles.container}>
-      <Task31 />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Task32 />
+    </SafeAreaView>
   );
-};
+}
+
+export default App; 
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start', 
-    alignItems: 'center',
   },
 });
-
-export default App;
