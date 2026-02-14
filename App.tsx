@@ -1,19 +1,19 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import Task32 from './Tasks/Task32';
+import Task33 from './Tasks/Task33';
 
-function App() {
+function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
-      <Task32 />
+      <Task33 />
     </SafeAreaView>
   );
 }
 
-export default App; 
+export default App;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
